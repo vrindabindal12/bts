@@ -17,6 +17,14 @@
       var o=menu.classList.toggle('open');
       ham.setAttribute('aria-expanded',String(o));
       ham.classList.toggle('active',o);
+      if(!o){
+        // Close all submenus when menu is closed
+        document.querySelectorAll('.drop-wrap').forEach(function(w){
+          w.classList.remove('submenu-open');
+          var d=w.querySelector('.dropdown');
+          if(d) d.classList.remove('open');
+        });
+      }
     });
   }
   // Dropdowns (hover on desktop, click on mobile)
@@ -27,7 +35,11 @@
     w.addEventListener('mouseenter',function(){clearTimeout(t);d.classList.add('open');});
     w.addEventListener('mouseleave',function(){t=setTimeout(function(){d.classList.remove('open');},100);});
     w.querySelector('.nav-a').addEventListener('click',function(e){
-      if(window.innerWidth<768){e.preventDefault();d.classList.toggle('open');}
+      if(window.innerWidth<768){
+        e.preventDefault();
+        d.classList.toggle('open');
+        w.classList.toggle('submenu-open');
+      }
     });
   });
   // Close mobile menu on link click
