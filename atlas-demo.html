@@ -504,6 +504,12 @@ input,textarea,select { font:inherit; }
 .rv.vi,.rl.vi,.rr.vi,.rs.vi { opacity:1; transform:none; animation:none; }
 [d1]{transition-delay:.1s}[d2]{transition-delay:.2s}[d3]{transition-delay:.3s}[d4]{transition-delay:.4s}[d5]{transition-delay:.5s}
 
+    .grid-asymmetric-2 {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: var(--gap, 24px);
+    }
+
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   :root{--px:28px}
@@ -537,7 +543,7 @@ input,textarea,select { font:inherit; }
     opacity:1;
     visibility:visible;
   }
-  .nav-a{padding:13px 16px;font-size:16px}
+  .nav-a{padding:8px 16px;font-size:15px}
   .drop-wrap .dropdown{position:static;transform:none;opacity:1;pointer-events:all;display:none;padding-left:12px}
   .drop-wrap .dropdown.open{display:block}
   .hamburger{display:flex}
@@ -556,7 +562,10 @@ input,textarea,select { font:inherit; }
   .sec{padding:60px 0}
   .hero{padding-top:76px}
   .cmp-head,.cmp-row{grid-template-columns:1fr}
-  .cmp-h-bad,.cmp-old{display:none}
+  .grid-asymmetric-2 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
@@ -581,7 +590,7 @@ input,textarea,select { font:inherit; }
 </section>
 <section class="sec">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:72px;align-items:start">
+    <div class="grid-asymmetric-2" style="--gap:72px;align-items:start">
       <div class="rl">
         <span class="eyebrow">What to Expect</span>
         <h2 style="font-size:clamp(22px,2.5vw,30px);margin-bottom:14px">A demonstration specific to your firm</h2>
