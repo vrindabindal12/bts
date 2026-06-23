@@ -1279,6 +1279,23 @@
       transition-delay: .5s
     }
 
+    .grid-2-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap, 24px);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-left: 1px solid rgba(26, 43, 30, .08);
+    }
+
+    .stats-col {
+      padding: 0 36px;
+      border-right: 1px solid rgba(26, 43, 30, .08);
+    }
+
     /* ── RESPONSIVE ── */
     @media(max-width:1024px) {
       :root {
@@ -1296,6 +1313,22 @@
 
       .pc-grid {
         grid-template-columns: 1fr 1fr
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        border-left: none;
+        border-top: 1px solid rgba(26, 43, 30, .08);
+      }
+
+      .stats-col {
+        padding: 24px 20px;
+        border-right: 1px solid rgba(26, 43, 30, .08);
+        border-bottom: 1px solid rgba(26, 43, 30, .08);
+      }
+
+      .stats-col:nth-child(2n) {
+        border-right: none;
       }
     }
 
@@ -1401,6 +1434,26 @@
       .hero {
         padding-top: 76px
       }
+
+      .grid-2-col {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+        border-top: 1px solid rgba(26, 43, 30, .08);
+      }
+
+      .stats-col {
+        padding: 20px 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(26, 43, 30, .08);
+      }
+
+      .stats-col:last-child {
+        border-bottom: none;
+      }
     }
 
     @media(prefers-reduced-motion:reduce) {
@@ -1446,7 +1499,7 @@
           <line x1="19" y1="12" x2="5" y2="12" />
           <polyline points="12 19 5 12 12 5" />
         </svg> Back to BTS</a>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+      <div class="grid-2-col" style="--gap:64px;align-items:center">
         <div>
           <div class="kicker rv" style="background:rgba(22,101,52,.1);border-color:rgba(22,101,52,.3);color:var(--gr)">
             Legal · Secure · Traceable</div>
@@ -1494,23 +1547,23 @@
 
   <section style="background:#fff;padding:52px 0;border-bottom:1px solid rgba(26,43,30,.08)">
     <div class="wrap">
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid rgba(26,43,30,.08)">
-        <div class="rv " style="padding:0 36px;border-right:1px solid rgba(26,43,30,.08)">
+      <div class="stats-grid">
+        <div class="rv stats-col">
           <div style="font-size:32px;margin-bottom:8px">≡</div>
           <div style="font-size:13px;color:var(--mu);line-height:1.5">Same structured methodology applied every
             comparison, every time</div>
         </div>
-        <div class="rv d1" style="padding:0 36px;border-right:1px solid rgba(26,43,30,.08)">
+        <div class="rv d1 stats-col">
           <div style="font-size:32px;margin-bottom:8px">🔒</div>
           <div style="font-size:13px;color:var(--mu);line-height:1.5">Secure isolated processing — documents never used
             for training</div>
         </div>
-        <div class="rv d2" style="padding:0 36px;border-right:1px solid rgba(26,43,30,.08)">
+        <div class="rv d2 stats-col">
           <div style="font-size:32px;margin-bottom:8px">📋</div>
           <div style="font-size:13px;color:var(--mu);line-height:1.5">Immutable audit trail for every comparison event
           </div>
         </div>
-        <div class="rv d3" style="padding:0 36px;border-right:1px solid rgba(26,43,30,.08)">
+        <div class="rv d3 stats-col">
           <div style="font-size:32px;margin-bottom:8px">⚡</div>
           <div style="font-size:13px;color:var(--mu);line-height:1.5">Minutes, not hours, for full structured comparison
             output</div>
