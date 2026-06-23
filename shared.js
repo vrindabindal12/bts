@@ -72,7 +72,7 @@
     });
   });
   // Active nav link
-  var path=location.pathname.split('/').pop()||'bts-index.html';
+  var path=location.pathname.split('/').pop()||'index.html';
   document.querySelectorAll('.nav-a[href]').forEach(function(a){
     if(a.getAttribute('href')===path)a.classList.add('on');
   });
