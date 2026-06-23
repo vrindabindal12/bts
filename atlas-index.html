@@ -1448,6 +1448,23 @@
       transition-delay: .5s
     }
 
+    .grid-2-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap, 24px);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-left: 1px solid rgba(28, 18, 8, .08);
+    }
+
+    .stats-col {
+      padding: 0 36px;
+      border-right: 1px solid rgba(28, 18, 8, .08);
+    }
+
     /* ── RESPONSIVE ── */
     @media(max-width:1024px) {
       :root {
@@ -1469,6 +1486,22 @@
 
       .profile-card {
         grid-template-columns: 220px 1fr
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        border-left: none;
+        border-top: 1px solid rgba(28, 18, 8, .08);
+      }
+
+      .stats-col {
+        padding: 24px 20px;
+        border-right: 1px solid rgba(28, 18, 8, .08);
+        border-bottom: 1px solid rgba(28, 18, 8, .08);
+      }
+
+      .stats-col:nth-child(2n) {
+        border-right: none;
       }
     }
 
@@ -1598,6 +1631,33 @@
       .cmp-old {
         display: none
       }
+
+      .grid-2-col {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+        border-top: 1px solid rgba(28, 18, 8, .08);
+      }
+
+      .stats-col {
+        padding: 20px 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(28, 18, 8, .08);
+      }
+
+      .stats-col:last-child {
+        border-bottom: none;
+      }
+    }
+
+    @media(max-width:480px) {
+      .app-stat-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
     }
 
     @media(prefers-reduced-motion:reduce) {
@@ -1643,7 +1703,7 @@
           <line x1="19" y1="12" x2="5" y2="12" />
           <polyline points="12 19 5 12 12 5" />
         </svg> Back to BTS</a>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+      <div class="grid-2-col" style="--gap:64px;align-items:center">
         <div>
           <div class="kicker rv">Purpose-Built for Professional Services</div>
           <h1 class="rv" d1>Your Projects.<br>Your Time.<br><em>Your Profitability</em><br>— All in One Place.</h1>
@@ -1726,33 +1786,33 @@
 
   <section style="background:#fff;padding:52px 0;border-bottom:1px solid rgba(28,18,8,.08)">
     <div class="wrap">
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);border-left:1px solid rgba(28,18,8,.08)">
-        <div class="rv " style="padding:0 36px;border-right:1px solid rgba(28,18,8,.08)">
+      <div class="stats-grid">
+        <div class="rv stats-col">
           <div
             style="font-family:var(--fd);font-size:clamp(34px,4vw,50px);font-weight:700;color:var(--cu);line-height:1">
             100%</div>
           <div style="font-size:13px;color:var(--mu);margin-top:6px;line-height:1.5">Of tracked hours tied directly to
             billing</div>
         </div>
-        <div class="rv d1" style="padding:0 36px;border-right:1px solid rgba(28,18,8,.08)">
+        <div class="rv d1 stats-col">
           <div
             style="font-family:var(--fd);font-size:clamp(34px,4vw,50px);font-weight:700;color:var(--tl);line-height:1">
             2×</div>
           <div style="font-size:13px;color:var(--mu);margin-top:6px;line-height:1.5">Faster billing cycles vs. manual
             tracking</div>
         </div>
-        <div class="rv d2" style="padding:0 36px;border-right:1px solid rgba(28,18,8,.08)">
+        <div class="rv d2 stats-col">
           <div
             style="font-family:var(--fd);font-size:clamp(34px,4vw,50px);font-weight:700;color:var(--cu);line-height:1">
             Zero</div>
           <div style="font-size:13px;color:var(--mu);margin-top:6px;line-height:1.5">Revenue leakage from unlogged hours
           </div>
         </div>
-        <div class="rv d3" style="padding:0 36px;border-right:1px solid rgba(28,18,8,.08)">
+        <div class="rv d3 stats-col">
           <div
             style="font-family:var(--fd);font-size:clamp(34px,4vw,50px);font-weight:700;color:var(--tl);line-height:1">
             Live</div>
-          <div style="font-size:13px;color:var(--mu);margin-top:6px;line-height:1.5">Project margin visibility
+          <div style="font-size:13px;color:var(--mu);margin-top:6px;line-height:1.5">Live project margin visibility
             throughout engagements</div>
         </div>
       </div>
@@ -1806,7 +1866,7 @@
 
   <section class="sec">
     <div class="wrap">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+      <div class="grid-2-col" style="--gap:64px;align-items:center">
         <div>
           <span class="eyebrow rv">Why Atlas</span>
           <h2 class="rv" d1>If You're Still in Spreadsheets, You're Losing Revenue You Don't Know About.</h2>
