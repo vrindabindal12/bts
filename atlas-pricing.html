@@ -517,8 +517,9 @@ input,textarea,select { font:inherit; }
   .nav-links{
     display:none;position:fixed;top:var(--nh);left:0;right:0;bottom:0;
     background:var(--card);flex-direction:column;padding:20px;gap:4px;
-    z-index:490;overflow-y:auto;
+    z-index:490;overflow-y:auto;scrollbar-width:none;-ms-overflow-style:none;
   }
+  .nav-links::-webkit-scrollbar{display:none;}
   .nav-links.open{display:flex}
   .nav-a{padding:13px 16px;font-size:16px}
   .drop-wrap .dropdown{position:static;transform:none;opacity:1;pointer-events:all;display:none;padding-left:12px}
@@ -643,6 +644,7 @@ input,textarea,select { font:inherit; }
   // Close mobile menu on nav link click
   if(nm) nm.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click',function(){
+      if(a.getAttribute('aria-haspopup')==='true'||a.getAttribute('href')==='#')return;
       nm.classList.remove('open');
       if(ham)ham.setAttribute('aria-expanded','false');
       document.body.style.overflow='';

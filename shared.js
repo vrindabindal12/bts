@@ -16,7 +16,7 @@
     ham.addEventListener('click',function(){
       var o=menu.classList.toggle('open');
       ham.setAttribute('aria-expanded',String(o));
-      document.body.style.overflow=o?'hidden':'';
+      ham.classList.toggle('active',o);
     });
   }
   // Dropdowns (hover on desktop, click on mobile)
@@ -33,9 +33,12 @@
   // Close mobile menu on link click
   if(menu) menu.querySelectorAll('a').forEach(function(a){
     a.addEventListener('click',function(){
+      if(a.getAttribute('aria-haspopup')==='true'||a.getAttribute('href')==='#')return;
       menu.classList.remove('open');
-      if(ham)ham.setAttribute('aria-expanded','false');
-      document.body.style.overflow='';
+      if(ham){
+        ham.setAttribute('aria-expanded','false');
+        ham.classList.remove('active');
+      }
     });
   });
   // Animated counters
