@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Color Theme Options — Atlas & Sentry</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.theme-section{padding:64px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.theme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.swatch-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.swatch{border-radius:6px;padding:20px 14px 12px;min-width:100px;flex:1}
+.sw-name{font-size:11px;font-weight:700;color:rgba(255,255,255,.8);margin-bottom:4px}
+.sw-hex{font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.5)}
+.tag{display:inline-block;padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;margin-right:6px;margin-bottom:6px}
+.tag-rec{background:rgba(42,157,143,.2);color:#3BB8A8}
+.tag-bold{background:rgba(184,115,51,.2);color:#D4956A}
+.tag-safe{background:rgba(139,148,158,.2);color:#8B949E}
+.preview-card{border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+.preview-nav{padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.preview-logo{font-size:18px;font-weight:700}
+.preview-btn{padding:7px 16px;border-radius:3px;font-size:12px;font-weight:700;cursor:default}
+.preview-hero{padding:32px 20px}
+.preview-eyebrow{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
+.preview-h{font-size:20px;font-weight:700;line-height:1.2;margin-bottom:10px}
+.preview-p{font-size:12px;line-height:1.6;opacity:.7;margin-bottom:16px}
+.preview-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 20px 20px}
+.preview-stat{border-radius:4px;padding:12px;text-align:center}
+.preview-stat-n{font-size:18px;font-weight:700}
+.preview-stat-l{font-size:10px;opacity:.6;margin-top:2px}
+.rationale{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:20px 24px;margin-top:16px}
+.rationale h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-bottom:8px}
+.rationale p{font-size:14px;color:rgba(255,255,255,.65);line-height:1.6;margin:0}
+@media(max-width:768px){.theme-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body style="background:#0A1520;color:#C8D3DE;font-family:'Inter',system-ui,sans-serif">
+
+<div style="background:#0F1E30;border-bottom:2px solid #B87333;padding:0 48px;height:72px;display:flex;align-items:center;position:sticky;top:0;z-index:100">
+  <span style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#F0F4F8">Color Themes<span style="color:#B87333">.</span></span>
+  <span style="margin-left:16px;font-size:13px;color:#8A9BB0">Atlas &amp; Sentry — Design Options</span>
+</div>
+
+<div style="max-width:1200px;margin:0 auto;padding:0 48px">
+
+<!-- INTRO -->
+<div style="padding:56px 0 32px">
+  <h1 style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#F0F4F8;margin-bottom:16px">Color Theme Options</h1>
+  <p style="font-size:17px;color:#8A9BB0;max-width:680px;line-height:1.75">Four theme options each for Atlas and Sentry, with rationale. BTS Corporate remains fixed on Navy + Copper — the product sites have more creative latitude because they need to stand out independently while still connecting to the BTS family.</p>
+  <div style="display:flex;gap:16px;margin-top:24px;flex-wrap:wrap">
+    <a href="#atlas-themes" style="padding:10px 20px;background:#B87333;color:#0A1520;border-radius:4px;font-size:13px;font-weight:700">Atlas Themes</a>
+    <a href="#sentry-themes" style="padding:10px 20px;background:transparent;border:1.5px solid #2A9D8F;color:#2A9D8F;border-radius:4px;font-size:13px;font-weight:700">Sentry Themes</a>
+  </div>
+</div>
+
+<!-- BTS FIXED -->
+<div class="theme-section">
+  <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#2A9D8F">BTS Corporate — Fixed Palette</span>
+  <h2 style="font-family:'Playfair Display',serif;font-size:28px;color:#F0F4F8;margin:12px 0 8px">Navy · Copper · Teal</h2>
+  <p style="font-size:14px;color:#8A9BB0;max-width:600px">The BTS corporate identity is locked. Navy + Copper communicates institutional authority; Teal adds the precision-technology signal. Products can diverge as long as they feel premium and trustworthy.</p>
+  <div class="swatch-row" style="margin-top:20px">
+    <div class="swatch" style="background:#0A1520"><div class="sw-name">Navy Deep</div><div class="sw-hex">#0A1520</div></div>
+    <div class="swatch" style="background:#162035"><div class="sw-name">Navy Mid</div><div class="sw-hex">#162035</div></div>
+    <div class="swatch" style="background:#1E2D45"><div class="sw-name">Navy Light</div><div class="sw-hex">#1E2D45</div></div>
+    <div class="swatch" style="background:#B87333"><div class="sw-name">Copper</div><div class="sw-hex">#B87333</div></div>
+    <div class="swatch" style="background:#D4956A"><div class="sw-name">Copper Light</div><div class="sw-hex">#D4956A</div></div>
+    <div class="swatch" style="background:#2A9D8F"><div class="sw-name">Teal</div><div class="sw-hex">#2A9D8F</div></div>
+    <div class="swatch" style="background:#F0F4F8"><div class="sw-name">Off-White</div><div class="sw-hex" style="color:rgba(0,0,0,.5)">#F0F4F8</div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     ATLAS THEMES
+══════════════════════════════════════ -->
+<div id="atlas-themes" style="padding-top:56px">
+  <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#B87333">Atlas — Four Theme Options</span>
+  <h2 style="font-family:'Playfair Display',serif;font-size:36px;color:#F0F4F8;margin:12px 0 8px">Atlas Color Themes</h2>
+  <p style="font-size:15px;color:#8A9BB0;max-width:640px">Atlas is a time tracking and billing tool. The palette should feel precise, professional, and commercially serious — not playful. Each option below maintains the dark navy foundation while varying the primary accent and personality.</p>
+</div>
+
+<!-- ATLAS A -->
+<div class="theme-section">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+    <span class="tag tag-rec">★ Recommended</span>
+    <span class="tag tag-safe">Currently Implemented</span>
+  </div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:#F0F4F8;margin-bottom:6px">A · Copper &amp; Teal on Navy</h3>
+  <p style="font-size:14px;color:#8A9BB0;max-width:600px">The existing palette. Copper primary accent signals value and premium positioning; Teal secondary is precision and data clarity. Works because professional services buyers associate copper with reliability and craft.</p>
+  <div class="swatch-row">
+    <div class="swatch" style="background:#0A1520"><div class="sw-name">Background</div><div class="sw-hex">#0A1520</div></div>
+    <div class="swatch" style="background:#B87333"><div class="sw-name">Primary Accent</div><div class="sw-hex">#B87333</div></div>
+    <div class="swatch" style="background:#D4956A"><div class="sw-name">Accent Light</div><div class="sw-hex">#D4956A</div></div>
+    <div class="swatch" style="background:#2A9D8F"><div class="sw-name">Secondary</div><div class="sw-hex">#2A9D8F</div></div>
+    <div class="swatch" style="background:#F0F4F8"><div class="sw-name">Text</div><div class="sw-hex" style="color:rgba(0,0,0,.5)">#F0F4F8</div></div>
+  </div>
+  <div class="preview-card" style="max-width:420px;margin-top:20px;background:#0A1520">
+    <div class="preview-nav" style="background:#0F1E30;border-bottom:2px solid #B87333">
+      <span class="preview-logo" style="color:#F0F4F8">Atlas<span style="color:#B87333">.</span></span>
+      <span class="preview-btn" style="background:#2A9D8F;color:#fff">Login →</span>
+    </div>
+    <div class="preview-hero" style="background:#0A1520">
+      <div class="preview-eyebrow" style="color:#2A9D8F">Time · Projects · Billing</div>
+      <div class="preview-h" style="color:#F0F4F8">Your Profitability,<br><em style="color:#B87333;font-style:italic">All in One Place.</em></div>
+      <div class="preview-p" style="color:#8A9BB0">Built for legal, accounting, and consulting firms.</div>
+      <span class="preview-btn" style="background:#B87333;color:#0A1520">Request a Demo</span>
+    </div>
+    <div class="preview-stat-row" style="background:#0F1E30">
+      <div class="preview-stat" style="background:#142336"><div class="preview-stat-n" style="color:#B87333">284.5</div><div class="preview-stat-l">Hours / Month</div></div>
+      <div class="preview-stat" style="background:#142336"><div class="preview-stat-n" style="color:#D4956A">$62k</div><div class="preview-stat-l">Billed Revenue</div></div>
+      <div class="preview-stat" style="background:#142336"><div class="preview-stat-n" style="color:#3BB8A8">83%</div><div class="preview-stat-l">Utilization</div></div>
+    </div>
+  </div>
+  <div class="rationale"><h4>Why This Works</h4><p>Copper has a natural association with value, currency, and precision craftsmanship. In a billing tool, this is unconsciously persuasive. The pairing with teal as the data accent creates a two-register system: copper for commercial importance, teal for data clarity. It also maintains visual harmony with BTS corporate.</p></div>
+</div>
+
+<!-- ATLAS B -->
+<div class="theme-section">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+    <span class="tag tag-bold">Bold Alternative</span>
+  </div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:#F0F4F8;margin-bottom:6px">B · Electric Blue &amp; Copper on Deep Navy</h3>
+  <p style="font-size:14px;color:#8A9BB0;max-width:600px">Electric blue primary conveys digital precision and speed — strong SaaS signal. Copper is retained as a secondary warm accent to maintain BTS family connection and add commercial credibility. Light mode variant available.</p>
+  <div class="swatch-row">
+    <div class="swatch" style="background:#07111D"><div class="sw-name">Deep Navy BG</div><div class="sw-hex">#07111D</div></div>
+    <div class="swatch" style="background:#2563EB"><div class="sw-name">Electric Blue</div><div class="sw-hex">#2563EB</div></div>
+    <div class="swatch" style="background:#60A5FA"><div class="sw-name">Blue Light</div><div class="sw-hex">#60A5FA</div></div>
+    <div class="swatch" style="background:#B87333"><div class="sw-name">Copper Accent</div><div class="sw-hex">#B87333</div></div>
+    <div class="swatch" style="background:#F0F4F8"><div class="sw-name">Text</div><div class="sw-hex" style="color:rgba(0,0,0,.5)">#F0F4F8</div></div>
+  </div>
+  <div class="preview-card" style="max-width:420px;margin-top:20px;background:#07111D">
+    <div class="preview-nav" style="background:#0C1A2E;border-bottom:2px solid #2563EB">
+      <span class="preview-logo" style="color:#F0F4F8">Atlas<span style="color:#2563EB">.</span></span>
+      <span class="preview-btn" style="background:#2563EB;color:#fff">Login →</span>
+    </div>
+    <div class="preview-hero" style="background:#07111D">
+      <div class="preview-eyebrow" style="color:#60A5FA">Time · Projects · Billing</div>
+      <div class="preview-h" style="color:#F0F4F8">Your Profitability,<br><em style="color:#2563EB;font-style:italic">All in One Place.</em></div>
+      <div class="preview-p" style="color:#8A9BB0">Built for legal, accounting, and consulting firms.</div>
+      <span class="preview-btn" style="background:#2563EB;color:#fff">Request a Demo</span>
+    </div>
+    <div class="preview-stat-row" style="background:#0C1A2E">
+      <div class="preview-stat" style="background:#132238"><div class="preview-stat-n" style="color:#60A5FA">284.5</div><div class="preview-stat-l">Hours / Month</div></div>
+      <div class="preview-stat" style="background:#132238"><div class="preview-stat-n" style="color:#B87333">$62k</div><div class="preview-stat-l">Billed Revenue</div></div>
+      <div class="preview-stat" style="background:#132238"><div class="preview-stat-n" style="color:#60A5FA">83%</div><div class="preview-stat-l">Utilization</div></div>
+    </div>
+  </div>
+  <div class="rationale"><h4>Why This Works</h4><p>Electric blue is the dominant color in enterprise SaaS (Salesforce, Notion, Linear) — buyers immediately read it as serious software. The copper secondary creates a warm counterpoint that prevents the site from feeling cold or generic. Better differentiation from typical legal software aesthetics.</p></div>
+</div>
+
+<!-- ATLAS C -->
+<div class="theme-section">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+    <span class="tag tag-safe">Light Mode Option</span>
+  </div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:#F0F4F8;margin-bottom:6px">C · Slate White (Light Mode) with Copper &amp; Ink</h3>
+  <p style="font-size:14px;color:#8A9BB0;max-width:600px">A premium light mode for clients who find dark UIs too heavy. Slate white background, ink navy text, copper as the accent. Feels like a high-end professional services brand — Deloitte meets SaaS. Strong print-to-digital continuity.</p>
+  <div class="swatch-row">
+    <div class="swatch" style="background:#F5F6F8;border:1px solid rgba(0,0,0,.08)"><div class="sw-name" style="color:#0D1B2A">Slate White BG</div><div class="sw-hex" style="color:rgba(0,0,0,.4)">#F5F6F8</div></div>
+    <div class="swatch" style="background:#0D1B2A"><div class="sw-name">Ink Navy</div><div class="sw-hex">#0D1B2A</div></div>
+    <div class="swatch" style="background:#B87333"><div class="sw-name">Copper Primary</div><div class="sw-hex">#B87333</div></div>
+    <div class="swatch" style="background:#2A9D8F"><div class="sw-name">Teal Secondary</div><div class="sw-hex">#2A9D8F</div></div>
+    <div class="swatch" style="background:#64748B"><div class="sw-name">Slate Muted</div><div class="sw-hex">#64748B</div></div>
+  </div>
+  <div class="preview-card" style="max-width:420px;margin-top:20px;background:#F5F6F8">
+    <div class="preview-nav" style="background:#fff;border-bottom:2px solid #B87333">
+      <span class="preview-logo" style="color:#0D1B2A">Atlas<span style="color:#B87333">.</span></span>
+      <span class="preview-btn" style="background:#2A9D8F;color:#fff">Login →</span>
+    </div>
+    <div class="preview-hero" style="background:#F5F6F8">
+      <div class="preview-eyebrow" style="color:#2A9D8F">Time · Projects · Billing</div>
+      <div class="preview-h" style="color:#0D1B2A">Your Profitability,<br><em style="color:#B87333;font-style:italic">All in One Place.</em></div>
+      <div class="preview-p" style="color:#64748B">Built for legal, accounting, and consulting firms.</div>
+      <span class="preview-btn" style="background:#B87333;color:#fff">Request a Demo</span>
+    </div>
+    <div class="preview-stat-row" style="background:#EEF0F3">
+      <div class="preview-stat" style="background:#fff;border:1px solid rgba(0,0,0,.06)"><div class="preview-stat-n" style="color:#B87333">284.5</div><div class="preview-stat-l" style="color:#64748B">Hours / Month</div></div>
+      <div class="preview-stat" style="background:#fff;border:1px solid rgba(0,0,0,.06)"><div class="preview-stat-n" style="color:#0D1B2A">$62k</div><div class="preview-stat-l" style="color:#64748B">Billed Revenue</div></div>
+      <div class="preview-stat" style="background:#fff;border:1px solid rgba(0,0,0,.06)"><div class="preview-stat-n" style="color:#2A9D8F">83%</div><div class="preview-stat-l" style="color:#64748B">Utilization</div></div>
+    </div>
+  </div>
+  <div class="rationale"><h4>Why This Works</h4><p>Legal and accounting buyers often work in white-background environments. A premium light mode reduces visual friction for these buyers and signals that Atlas is serious professional software — not another startup app. The copper and teal accents carry BTS family identity into the light environment cleanly.</p></div>
+</div>
+
+<!-- ATLAS D -->
+<div class="theme-section">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+    <span class="tag tag-bold">High Contrast</span>
+  </div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:#F0F4F8;margin-bottom:6px">D · Midnight Black &amp; Amber Gold on True Dark</h3>
+  <p style="font-size:14px;color:#8A9BB0;max-width:600px">True black background with amber gold as the accent. More dramatic and high-contrast than navy — signals exclusivity and premium-tier positioning. Amber is close to copper but warmer and more golden, implying prestige over craft.</p>
+  <div class="swatch-row">
+    <div class="swatch" style="background:#080C12"><div class="sw-name">True Black BG</div><div class="sw-hex">#080C12</div></div>
+    <div class="swatch" style="background:#F59E0B"><div class="sw-name">Amber Gold</div><div class="sw-hex">#F59E0B</div></div>
+    <div class="swatch" style="background:#FCD34D"><div class="sw-name">Gold Light</div><div class="sw-hex">#FCD34D</div></div>
+    <div class="swatch" style="background:#0EA5E9"><div class="sw-name">Sky Blue</div><div class="sw-hex">#0EA5E9</div></div>
+    <div class="swatch" style="background:#F8FAFC"><div class="sw-name">Text</div><div class="sw-hex" style="color:rgba(0,0,0,.5)">#F8FAFC</div></div>
+  </div>
+  <div class="preview-card" style="max-width:420px;margin-top:20px;background:#080C12">
+    <div class="preview-nav" style="background:#0C1220;border-bottom:2px solid #F59E0B">
+      <span class="preview-logo" style="color:#F8FAFC">Atlas<span style="color:#F59E0B">.</span></span>
+      <span class="preview-btn" style="background:#0EA5E9;color:#fff">Login →</span>
+    </div>
+    <div class="preview-hero" style="background:#080C12">
+      <div class="preview-eyebrow" style="color:#0EA5E9">Time · Projects · Billing</div>
+      <div class="preview-h" style="color:#F8FAFC">Your Profitability,<br><em style="color:#F59E0B;font-style:italic">All in One Place.</em></div>
+      <div class="preview-p" style="color:#94A3B8">Built for legal, accounting, and consulting firms.</div>
+      <span class="preview-btn" style="background:#F59E0B;color:#0A0A0A">Request a Demo</span>
+    </div>
+    <div class="preview-stat-row" style="background:#0C1220">
+      <div class="preview-stat" style="background:#111827"><div class="preview-stat-n" style="color:#F59E0B">284.5</div><div class="preview-stat-l">Hours / Month</div></div>
+      <div class="preview-stat" style="background:#111827"><div class="preview-stat-n" style="color:#FCD34D">$62k</div><div class="preview-stat-l">Billed Revenue</div></div>
+      <div class="preview-stat" style="background:#111827"><div class="preview-stat-n" style="color:#0EA5E9">83%</div><div class="preview-stat-l">Utilization</div></div>
+    </div>
+  </div>
+  <div class="rationale"><h4>Why This Works</h4><p>True black + amber gold is used by premium product brands (luxury watches, financial platforms, performance vehicles) to signal exclusivity. If Atlas wants to position as the premium choice in professional services time tracking — not just good, but the best — this palette makes that case visually. Requires more careful typography work to maintain legibility.</p></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SENTRY THEMES
+══════════════════════════════════════ -->
+<div id="sentry-themes" style="padding-top:56px">
+  <span style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#2A9D8F">Sentry — Four Theme Options</span>
+  <h2 style="font-family:'Playfair Display',serif;font-size:36px;color:#F0F4F8;margin:12px 0 8px">Sentry Color Themes</h2>
+  <p style="font-size:15px;color:#8A9BB0;max-width:640px">Sentry handles sensitive legal documents. The palette needs to communicate security, precision, and institutional trust — not creativity or energy. Each option below prioritises that signal while giving Sentry a distinctive identity from both BTS and Atlas.</p>
+</div>
+
+<!-- SENTRY A -->
+<div class="theme-section">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+    <span class="tag tag-rec">★ Recommended</span>
+    <span class="tag tag-safe">Currently Implemented</span>
+  </div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:#F0F4F8;margin-bottom:6px">A · Teal &amp; Copper on Navy</h3>
+  <p style="font-size:14px;color:#8A9BB0;max-width:600px">Teal primary (swapped from Atlas) signals precision-data and legal/compliance accuracy. Copper secondary links to BTS identity and adds warmth. The teal works particularly well for risk-flag and document comparison UIs.</p>
+  <div class="swatch-row">
+    <div class="swatch" style="background:#0A1520"><div class="sw-name">Background</div><div class="sw-hex">#0A1520</div></div>
+    <div class="swatch" style="background:#2A9D8F"><div class="sw-name">Teal Primary</div><div class="sw-hex">#2A9D8F</div></div>
+    <div class="swatch" style="background:#3BB8A8"><div class="sw-name">Teal Light</div><div class="sw-hex">#3BB8A8</div></div>
+    <div class="swatch" style="background:#B87333"><div class="sw-name">Copper Accent</div><div class="sw-hex">#B87333</div></div>
+    <div class="swatch" style="background:#E8A020"><div class="sw-name">Risk Amber</div><div class="sw-hex">#E8A020</div></div>
+  </div>
+  <div class="preview-card" style="max-width:420px;margin-top:20px;background:#0A1520">
+    <div class="preview-nav" style="background:#0F1E30;border-bottom:2px solid #2A9D8F">
+      <span class="preview-logo" style="color:#F0F4F8">Sentry<span style="color:#2A9D8F">.</span></span>
+      <span class="preview-btn" style="background:#2A9D8F;color:#fff">Try Free →</span>
+    </div>
+    <div class="preview-hero" style="background:#0A1520">
+      <div class="preview-eyebrow" style="color:#2A9D8F">Legal · Secure · Traceable</div>
+      <div class="preview-h" style="color:#F0F4F8">Compare Legal Documents With <em style="color:#2A9D8F;font-style:italic">Precision.</em></div>
+      <div class="preview-p" style="color:#8A9BB0">Structured comparison. Complete audit trail.</div>
+      <span class="preview-btn" style="background:#B87333;color:#0A1520">Start Free Comparison</span>
+    </div>
+    <div style="padding:12px 20px 16px;background:#0F1E30;font-family:'JetBrains Mono',monospace;font-size:11px">
+      <div style="background:#19293F;border-radius:4px;padding:12px">
+        <div style="color:#8A9BB0;margin-bottom:6px">Section 4 — Confidentiality Term</div>
+        <div style="background:rgba(248,113,113,.12);color:#F87171;padding:3px 8px;border-radius:2px;margin-bottom:3px;text-decoration:line-through">- ...two (2) years.</div>
+        <div style="background:rgba(42,157,143,.12);color:#3BB8A8;padding:3px 8px;border-radius:2px">+ ...five (5) years.</div>
+        <div style="background:rgba(232,160,32,.1);border:1px solid rgba(232,160,32,.2);border-radius:3px;padding:6px 10px;margin-top:8px;color:#E8A020;font-size:10px">⚠ Risk flag: Term extended by 3 years</div>
+      </div>
+    </div>
+  </div>
+  <div class="rationale"><h4>Why This Works</h4><p>Teal as the lead color for Sentry creates clear product differentiation from Atlas (which leads with copper) while staying within the BTS palette. Teal's association with healthcare, legal, and compliance software is well-established — buyers intuitively read it as trustworthy and precise. The amber risk flag color works perfectly against both the dark background and the teal primary.</p></div>
+</div>
+
+<!-- SENTRY B -->
+<div class="theme-section">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+    <span class="tag tag-bold">Security-Forward</span>
+  </div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:#F0F4F8;margin-bottom:6px">B · Steel Blue &amp; Crimson on Near-Black</h3>
+  <p style="font-size:14px;color:#8A9BB0;max-width:600px">Steel blue conveys cold precision and institutional authority — think Bloomberg Terminal, cyber security firms, defence contractors. Crimson red is used only for risk flags and alerts (not as a brand accent) — extremely effective for surfacing problematic legal changes visually.</p>
+  <div class="swatch-row">
+    <div class="swatch" style="background:#0B0F1A"><div class="sw-name">Near-Black</div><div class="sw-hex">#0B0F1A</div></div>
+    <div class="swatch" style="background:#3B82F6"><div class="sw-name">Steel Blue</div><div class="sw-hex">#3B82F6</div></div>
+    <div class="swatch" style="background:#93C5FD"><div class="sw-name">Blue Light</div><div class="sw-hex">#93C5FD</div></div>
+    <div class="swatch" style="background:#6B7280"><div class="sw-name">Steel Grey</div><div class="sw-hex">#6B7280</div></div>
+    <div class="swatch" style="background:#DC2626"><div class="sw-name">Crimson Alert</div><div class="sw-hex">#DC2626</div></div>
+  </div>
+  <div class="preview-card" style="max-width:420px;margin-top:20px;background:#0B0F1A">
+    <div class="preview-nav" style="background:#111827;border-bottom:2px solid #3B82F6">
+      <span class="preview-logo" style="color:#F9FAFB">Sentry<span style="color:#3B82F6">.</span></span>
+      <span class="preview-btn" style="background:#3B82F6;color:#fff">Try Free →</span>
+    </div>
+    <div class="preview-hero" style="background:#0B0F1A">
+      <div class="preview-eyebrow" style="color:#93C5FD">Legal · Secure · Traceable</div>
+      <div class="preview-h" style="color:#F9FAFB">Compare Legal Documents With <em style="color:#3B82F6;font-style:italic">Precision.</em></div>
+      <div class="preview-p" style="color:#6B7280">Structured comparison. Complete audit trail.</div>
+      <span class="preview-btn" style="background:#3B82F6;color:#fff">Start Free Comparison</span>
+    </div>
+    <div style="padding:12px 20px 16px;background:#111827;font-family:'JetBrains Mono',monospace;font-size:11px">
+      <div style="background:#1F2937;border-radius:4px;padding:12px">
+        <div style="color:#6B7280;margin-bottom:6px">Section 7 — Governing Law</div>
+        <div style="background:rgba(220,38,38,.12);color:#FCA5A5;padding:3px 8px;border-radius:2px;margin-bottom:3px;text-decoration:line-through">- ...Province of Ontario.</div>
+        <div style="background:rgba(59,130,246,.12);color:#93C5FD;padding:3px 8px;border-radius:2px">+ ...State of Delaware.</div>
+        <div style="background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.3);border-radius:3px;padding:6px 10px;margin-top:8px;color:#FCA5A5;font-size:10px">⚠ Risk flag: Jurisdiction changed</div>
+      </div>
+    </div>
+  </div>
+  <div class="rationale"><h4>Why This Works</h4><p>Steel blue + crimson creates the highest-contrast risk signalling available — buyers who review legal documents daily will immediately understand that red means look here. The near-black background gives this the feel of a Bloomberg Terminal or a cybersecurity SIEM dashboard — deeply serious, institutional software. Best fit if Sentry wants to position as enterprise-grade legal compliance infrastructure.</p></div>
+</div>
+
+<!-- SENTRY C -->
+<div class="theme-section">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+    <span class="tag tag-safe">Light Mode Option</span>
+  </div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:#F0F4F8;margin-bottom:6px">C · Parchment White (Light Mode) with Forest Green &amp; Slate</h3>
+  <p style="font-size:14px;color:#8A9BB0;max-width:600px">A warm parchment-white background evokes legal document tradition — physically appropriate for a legal review tool. Forest green as the primary accent signals law firms, legal practice, and regulatory environments. Most familiar to senior lawyers.</p>
+  <div class="swatch-row">
+    <div class="swatch" style="background:#FAFAF8;border:1px solid rgba(0,0,0,.08)"><div class="sw-name" style="color:#1C1917">Parchment</div><div class="sw-hex" style="color:rgba(0,0,0,.4)">#FAFAF8</div></div>
+    <div class="swatch" style="background:#166534"><div class="sw-name">Forest Green</div><div class="sw-hex">#166534</div></div>
+    <div class="swatch" style="background:#16A34A"><div class="sw-name">Green Light</div><div class="sw-hex">#16A34A</div></div>
+    <div class="swatch" style="background:#1C1917"><div class="sw-name">Ink Dark</div><div class="sw-hex">#1C1917</div></div>
+    <div class="swatch" style="background:#B91C1C"><div class="sw-name">Risk Red</div><div class="sw-hex">#B91C1C</div></div>
+  </div>
+  <div class="preview-card" style="max-width:420px;margin-top:20px;background:#FAFAF8">
+    <div class="preview-nav" style="background:#fff;border-bottom:2px solid #166534">
+      <span class="preview-logo" style="color:#1C1917">Sentry<span style="color:#166534">.</span></span>
+      <span class="preview-btn" style="background:#166534;color:#fff">Try Free →</span>
+    </div>
+    <div class="preview-hero" style="background:#FAFAF8">
+      <div class="preview-eyebrow" style="color:#16A34A">Legal · Secure · Traceable</div>
+      <div class="preview-h" style="color:#1C1917">Compare Legal Documents With <em style="color:#166534;font-style:italic">Precision.</em></div>
+      <div class="preview-p" style="color:#57534E">Structured comparison. Complete audit trail.</div>
+      <span class="preview-btn" style="background:#166534;color:#fff">Start Free Comparison</span>
+    </div>
+    <div style="padding:12px 20px 16px;background:#F5F5F0;font-family:'JetBrains Mono',monospace;font-size:11px">
+      <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:4px;padding:12px">
+        <div style="color:#78716C;margin-bottom:6px">Section 4 — Confidentiality Term</div>
+        <div style="background:rgba(185,28,28,.08);color:#B91C1C;padding:3px 8px;border-radius:2px;margin-bottom:3px;text-decoration:line-through">- ...two (2) years.</div>
+        <div style="background:rgba(22,101,52,.08);color:#166534;padding:3px 8px;border-radius:2px">+ ...five (5) years.</div>
+        <div style="background:rgba(185,28,28,.06);border:1px solid rgba(185,28,28,.2);border-radius:3px;padding:6px 10px;margin-top:8px;color:#B91C1C;font-size:10px">⚠ Risk flag: Term extended by 3 years</div>
+      </div>
+    </div>
+  </div>
+  <div class="rationale"><h4>Why This Works</h4><p>Forest green + parchment is the aesthetic of legal practice itself — law firm letterhead, legal brief paper, law school colors. For a legal document tool, this is the highest-context alignment available. Senior lawyers and GCs will feel an immediate subconscious familiarity. Trade-off: this palette is less "software company" and more "institutional service" — which may be exactly right for the target buyer.</p></div>
+</div>
+
+<!-- SENTRY D -->
+<div class="theme-section">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+    <span class="tag tag-bold">Maximum Trust</span>
+  </div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:24px;color:#F0F4F8;margin-bottom:6px">D · Deep Navy &amp; Platinum Silver on True Dark</h3>
+  <p style="font-size:14px;color:#8A9BB0;max-width:600px">No strong accent color — navy and platinum silver only, with amber strictly reserved for risk flags. This is the most conservative, institutional option. Signals: we are infrastructure-grade software. You can trust us with your most sensitive documents. Best for enterprise positioning.</p>
+  <div class="swatch-row">
+    <div class="swatch" style="background:#060D18"><div class="sw-name">True Dark</div><div class="sw-hex">#060D18</div></div>
+    <div class="swatch" style="background:#1E3A5F"><div class="sw-name">Deep Navy</div><div class="sw-hex">#1E3A5F</div></div>
+    <div class="swatch" style="background:#94A3B8"><div class="sw-name">Platinum</div><div class="sw-hex">#94A3B8</div></div>
+    <div class="swatch" style="background:#CBD5E1"><div class="sw-name">Silver Light</div><div class="sw-hex">#CBD5E1</div></div>
+    <div class="swatch" style="background:#F59E0B"><div class="sw-name">Amber Alerts Only</div><div class="sw-hex">#F59E0B</div></div>
+  </div>
+  <div class="preview-card" style="max-width:420px;margin-top:20px;background:#060D18">
+    <div class="preview-nav" style="background:#0A1628;border-bottom:2px solid #1E3A5F">
+      <span class="preview-logo" style="color:#CBD5E1">Sentry<span style="color:#94A3B8">.</span></span>
+      <span class="preview-btn" style="background:#1E3A5F;color:#CBD5E1;border:1px solid #2D4F7A">Try Free</span>
+    </div>
+    <div class="preview-hero" style="background:#060D18">
+      <div class="preview-eyebrow" style="color:#94A3B8">Legal · Secure · Traceable</div>
+      <div class="preview-h" style="color:#F1F5F9">Compare Legal Documents With <em style="color:#CBD5E1;font-style:italic">Precision.</em></div>
+      <div class="preview-p" style="color:#64748B">Structured comparison. Complete audit trail.</div>
+      <span class="preview-btn" style="background:#1E3A5F;color:#CBD5E1;border:1px solid #2D4F7A">Start Free Comparison</span>
+    </div>
+    <div style="padding:12px 20px 16px;background:#0A1628;font-family:'JetBrains Mono',monospace;font-size:11px">
+      <div style="background:#11223A;border-radius:4px;padding:12px">
+        <div style="color:#64748B;margin-bottom:6px">Section 7 — Governing Law</div>
+        <div style="background:rgba(245,158,11,.1);color:#94A3B8;padding:3px 8px;border-radius:2px;margin-bottom:3px;text-decoration:line-through;opacity:.6">- ...Province of Ontario.</div>
+        <div style="background:rgba(148,163,184,.08);color:#CBD5E1;padding:3px 8px;border-radius:2px">+ ...State of Delaware.</div>
+        <div style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);border-radius:3px;padding:6px 10px;margin-top:8px;color:#F59E0B;font-size:10px">⚠ Risk flag: Jurisdiction changed</div>
+      </div>
+    </div>
+  </div>
+  <div class="rationale"><h4>Why This Works</h4><p>No-accent institutional design is used by the most trusted organisations in finance, defence, and intelligence (Bloomberg, BlackRock, many government systems). By refusing to use a colorful accent, this palette makes a statement: we don't need to impress you with color — our product's value speaks for itself. The only color that appears is amber, reserved exclusively for risk signals, which makes every risk flag unmissable. Highest trust signal; lowest visual excitement.</p></div>
+</div>
+
+<!-- RECOMMENDATION SUMMARY -->
+<div style="padding:56px 0">
+  <h2 style="font-family:'Playfair Display',serif;font-size:32px;color:#F0F4F8;margin-bottom:24px">Recommendation Summary</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div style="background:#142336;border:1px solid rgba(255,255,255,.08);border-top:2px solid #B87333;border-radius:8px;padding:28px">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#B87333;margin-bottom:10px">Atlas — Recommended</div>
+      <h3 style="font-size:18px;color:#F0F4F8;margin-bottom:10px">Option A: Copper &amp; Teal on Navy</h3>
+      <p style="font-size:14px;color:#8A9BB0;line-height:1.65">Retains BTS family identity. Copper's value signal is ideal for a billing product. Best brand coherence across the BTS ecosystem. <strong style="color:#F0F4F8">Switch to Option B if you want stronger SaaS signal</strong> or Option C if your buyers prefer light mode interfaces.</p>
+    </div>
+    <div style="background:#142336;border:1px solid rgba(255,255,255,.08);border-top:2px solid #2A9D8F;border-radius:8px;padding:28px">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#2A9D8F;margin-bottom:10px">Sentry — Recommended</div>
+      <h3 style="font-size:18px;color:#F0F4F8;margin-bottom:10px">Option A: Teal &amp; Copper on Navy</h3>
+      <p style="font-size:14px;color:#8A9BB0;line-height:1.65">Swapping teal to primary for Sentry creates clear product differentiation from Atlas while staying within the BTS family. <strong style="color:#F0F4F8">Switch to Option B for maximum security/enterprise positioning</strong> or Option C if targeting senior lawyers who work in traditional firm environments.</p>
+    </div>
+  </div>
+  <p style="font-size:13px;color:#8A9BB0;margin-top:20px">To implement a different theme option: update the CSS custom properties in <code style="background:#142336;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:12px">shared.css</code> — specifically the <code style="background:#142336;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:12px">--cu</code>, <code style="background:#142336;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:12px">--tl</code>, and <code style="background:#142336;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:12px">--bg</code> variables. Product sites can override these with a <code style="background:#142336;padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:12px">&lt;style&gt;</code> block after the shared stylesheet import.</p>
+</div>
+
+</div><!-- /wrap -->
+<script src="shared.js"></script>
+</body>
+</html>
